@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CampusLytics — Temporary Maintenance</title>
+
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <style>
+    html { scroll-behavior: smooth; }
+    html, body { height: 100%; margin: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .container-fluid,
+    .row { min-height: 100vh; }
+
+    /* LEFT PANEL */
+    .left-panel {
+      background: linear-gradient(135deg, #FF8A00, #FF4E00);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 2.5rem;
+      position: relative;
+      text-align: left;
+    }
+
+    .left-panel-content { max-width: 460px; }
+
+    .brand-title { margin-bottom: 0.75rem; line-height: 1.1; }
+
+    .brand-name {
+      display: block;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-tagline {
+      display: block;
+      margin-top: 0.35rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+      opacity: 0.9;
+    }
+
+    .left-panel p { margin: 0; max-width: 420px; }
+
+    .scroll-hint {
+      position: absolute;
+      left: 0; right: 0;
+      bottom: 16px;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .scroll-link {
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+    .scroll-link:hover { color: #fff; }
+
+    /* RIGHT PANEL */
+    .right-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f9fa;
+      padding: 2rem 1rem;
+    }
+
+    .right-wrapper .card {
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      border: none;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      background: rgba(255, 78, 0, 0.12);
+      color: #b93a00;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #FF4E00;
+      box-shadow: 0 0 0 4px rgba(255, 78, 0, 0.15);
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.18); opacity: 0.75; }
+    }
+
+    .btn-primary {
+      background-color: #FF4E00;
+      border-color: #FF4E00;
+      transition: all 0.2s ease-in-out;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background-color: #ff7a33;
+      border-color: #ff7a33;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 78, 0, 0.35);
+    }
+
+    .btn-outline-primary {
+      border-color: #FF4E00;
+      color: #FF4E00;
+      font-weight: 600;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #FF4E00;
+      border-color: #FF4E00;
+      color: #fff;
+    }
+
+    .muted-link {
+      color: #FF4E00;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .muted-link:hover { text-decoration: underline; }
+
+    .mini {
+      font-size: 0.92rem;
+      color: #6c757d;
+      margin-bottom: 0;
+    }
+
+    /* MOBILE: FULLSCREEN + SNAP */
+    @media (max-width: 767.98px) {
+      html, body {
+        scroll-snap-type: y mandatory;
+        overscroll-behavior-y: contain;
+      }
+
+      .left-panel,
+      .right-wrapper {
+        min-height: 100vh;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
+      .left-panel {
+        justify-content: center;
+        text-align: center;
+        padding: 3rem 2rem;
+      }
+
+      .left-panel-content { margin: 0 auto; }
+
+      .right-wrapper { padding: 2.5rem 1rem; }
+
+      .brand-name { font-size: 3rem; }
+      .brand-tagline { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+
+      <!-- LEFT PANEL -->
+      <div class="col-md-6 left-panel">
+        <div class="left-panel-content">
+          <h1 class="brand-title">
+            <span class="brand-name display-4">CampusLytics</span>
+            <span class="brand-tagline">Financial Clarity for Campus Life</span>
+          </h1>
+
+          <p class="lead">
+            CampusLytics is temporarily unavailable while we address AWS maintenance and stability issues.
+            Thanks for your patience.
+          </p>
+
+          <!-- MOBILE ONLY -->
+          <div class="scroll-hint d-md-none">
+            <a href="#status" class="scroll-link">View Status & Links</a>
+            <br>
+            <a href="#status" class="scroll-link">↓</a>
+            <br><br>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="col-md-6 right-wrapper" id="status">
+        <div class="card p-4" style="width: 100%; max-width: 520px;">
+          <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+            <div>
+              <div class="pill">
+                <span class="dot" aria-hidden="true"></span>
+                Temporary Maintenance
+              </div>
+              <h2 class="h4 mt-3 mb-1">Service temporarily taken down</h2>
+              <p class="mini">
+                As of <strong>January 18, 2026</strong>, CampusLytics has been taken offline while infrastructure updates are completed.
+              </p>
+            </div>
+          </div>
+
+          <div class="alert alert-light border mb-3">
+            <div class="d-flex align-items-start gap-2">
+              <div style="font-size: 1.1rem; line-height: 1.2;">ℹ️</div>
+              <div>
+                <div class="fw-semibold mb-1">What’s happening</div>
+                <div class="text-muted" style="font-size: 0.95rem;">
+                  We’re resolving AWS maintenance/stability issues and deploying improvements to ensure a reliable experience.
+                  This page will remain active in the meantime.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="fw-semibold mb-2">View</div>
+            <div class="d-grid gap-2">
+              <!-- portfolio -->
+              <a class="btn btn-primary" href="https://joshuasolano.com" target="_blank" rel="noopener">
+                Visit my portfolio (JoshuaSolano.com)
+              </a>
+
+              <!-- placeholders you will fill -->
+              <a class="btn btn-outline-primary" href="https://www.youtube.com/watch?v=k0uFFwM9_n0" target="_blank" rel="noopener">
+                Watch a short demo (deployed experience)
+              </a>
+
+              <a class="btn btn-outline-primary" href="https://www.youtube.com/watch?v=4kKZAqzTla8" target="_blank" rel="noopener">
+                Watch the full walkthrough (deep dive)
+              </a>
+            </div>
+
+            <div class="mt-3 text-center">
+            </div>
+          </div>
+
+          <hr class="my-3">
+
+          <div class="text-muted" style="font-size: 0.9rem;">
+            <div class="fw-semibold text-dark mb-1">Status</div>
+            <ul class="mb-2">
+              <li>Application: Offline</li>
+              <li>Expected Return: 01/25/2026</li>
+            </ul>
+            <div>
+              Last updated: <span id="lastUpdated">January 18, 2026</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Optional: show viewer-local "last updated" timestamp (keeps your hard date too).
+    (function () {
+      const el = document.getElementById("lastUpdated");
+      if (!el) return;
+
+      const now = new Date();
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      el.textContent = now.toLocaleDateString(undefined, options);
+    })();
+  </script>
+</body>
+</html>
